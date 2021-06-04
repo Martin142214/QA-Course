@@ -23,7 +23,13 @@ namespace DesignPatternsCourse
             {
                 Console.Write($"Please choose the type of player {i + 1}: ");
                 int input = int.Parse(Console.ReadLine());
-                
+                if (input < 1 || input > 3)
+                {
+                    Console.WriteLine("Please input a valid number!");
+                    Console.Write($"Please choose the type of player {i + 1}: ");
+                    input = int.Parse(Console.ReadLine());
+                }
+
                 switch (input)
                 {
                     case 1:
